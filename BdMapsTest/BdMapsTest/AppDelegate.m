@@ -8,8 +8,9 @@
 
 #import "AppDelegate.h"
 #import "BdMapViewController.h"
-@interface AppDelegate ()
 
+@interface AppDelegate ()
+@property(nonatomic,strong)BMKMapManager *mapManager;
 @end
 
 @implementation AppDelegate
@@ -22,9 +23,27 @@
     _window.backgroundColor = [UIColor whiteColor];
     BdMapViewController *rootCtr = [BdMapViewController new];
     _window.rootViewController = rootCtr;
+    
+   [self initBDMap];
     [_window makeKeyAndVisible];
     
+
+    
     return YES;
+}
+
+//设置百度地图
+- (void)initBDMap
+{
+    _mapManager = [[BMKMapManager alloc]init];
+    // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
+    BOOL ret = [_mapManager start:@"0lTnXFmZ5tpFVO3aRbf1fNIsNtaPu6Wj"  generalDelegate:self];
+    if (!ret) {
+        NSLog(@"manager start failed!");
+    }else{
+        NSLog(@"成功");
+    }
+    
 }
 
 

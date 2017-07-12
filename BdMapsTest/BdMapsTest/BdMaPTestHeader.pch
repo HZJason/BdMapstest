@@ -1,0 +1,17 @@
+//
+//  BdMaPTestHeader.pch
+//  BdMapsTest
+//
+//  Created by 黄泽 on 2017/7/12.
+//  Copyright © 2017年 黄泽. All rights reserved.
+//
+
+#ifndef BdMaPTestHeader_pch
+#define BdMaPTestHeader_pch
+#import "HZReuqest.h"
+#import "MapMacros.h"
+#import "URLConstants.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* BdMaPTestHeader_pch */
